@@ -1,12 +1,39 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import InteractiveNeuralVortex from '@/components/InteractiveNeuralVortex';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import WhoWeServe from '@/components/WhoWeServe';
+import HowItWorks from '@/components/HowItWorks';
+import WhatWeBuild from '@/components/WhatWeBuild';
+import ServicesCarousel from '@/components/ServicesCarousel';
+import Pricing from '@/components/Pricing';
+import Workflows from '@/components/Workflows';
+import Partners from '@/components/Partners';
+import FAQ from '@/components/FAQ';
+import FinalCTA from '@/components/FinalCTA';
+import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import AIAssistant from '@/components/AIAssistant';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen bg-background overflow-x-hidden">
+      <InteractiveNeuralVortex />
+      <Header />
+      <main>
+        <Hero />
+        <WhoWeServe />
+        <HowItWorks />
+        <WhatWeBuild />
+        <ServicesCarousel />
+        <Pricing />
+        <Workflows />
+        <Partners />
+        <FAQ />
+        <FinalCTA />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+      <AIAssistant />
     </div>
   );
 };
