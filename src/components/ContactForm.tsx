@@ -54,7 +54,7 @@ const ContactForm = () => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nType: ${activeTab}\n\nMessage:\n${formData.message}`
     );
-    window.open(`mailto:info@digitalxstudio.com?subject=${subject}&body=${body}`, '_self');
+    window.open(`mailto:info@digitalxstudio.com?cc=stephenoffice21@gmail.com&subject=${subject}&body=${body}`, '_self');
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
   };
