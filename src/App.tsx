@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-export default function App() {
+function App() {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
@@ -11,3 +11,5 @@ export default function App() {
     </Routes>
   );
 }
+
+export default App;
