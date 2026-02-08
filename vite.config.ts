@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  // 🔴 THIS LINE IS CRITICAL FOR GITHUB PAGES
+  // 
   base: "/neural-nexus/",
 
   plugins: [
