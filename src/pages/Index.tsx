@@ -12,7 +12,7 @@ import FAQ from '@/components/FAQ';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import AIAssistant from '@/components/AIAssistant';
+
 
 const Index = () => {
   return (
@@ -33,7 +33,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppButton />
-      <AIAssistant />
+      
     </div>
   );
 };

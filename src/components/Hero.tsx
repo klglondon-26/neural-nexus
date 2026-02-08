@@ -17,7 +17,8 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-8"
         >
-          <img src={dxsLogo} alt="DXS" className="w-28 h-28 md:w-36 md:h-36 mx-auto object-contain animate-float" />
+          <img src={dxsLogo} alt="DXS" className="w-48 h-auto md:w-72 lg:w-96 mx-auto object-contain animate-float drop-shadow-[0_0_40px_hsl(210_100%_55%/0.3)]" />
+          <p className="mt-3 text-sm md:text-base tracking-[0.35em] uppercase text-muted-foreground font-display font-medium">Digital X Studio</p>
         </motion.div>
 
         <motion.h1
