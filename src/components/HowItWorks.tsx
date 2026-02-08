@@ -4,6 +4,7 @@ import { Search, Hammer, Rocket } from 'lucide-react';
 
 const CALENDLY_URL = 'https://calendly.com/stephenoffice21/30min';
 const icons = [Search, Hammer, Rocket];
+const stepNumbers = ['1️⃣', '2️⃣', '3️⃣'];
 
 const HowItWorks = () => {
   const { t } = useLanguage();
@@ -23,7 +24,6 @@ const HowItWorks = () => {
         </motion.div>
 
         <div className="relative max-w-3xl mx-auto">
-          {/* Timeline line */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border/50" />
 
           {section.steps.map((step: any, i: number) => {
@@ -35,12 +35,15 @@ const HowItWorks = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
-                className={`relative flex items-start gap-6 mb-12 md:mb-16 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} md:text-${i % 2 === 0 ? 'right' : 'left'}`}
+                className={`relative flex items-start gap-6 mb-12 md:mb-16 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
               >
                 <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                   <div className={`glass-card p-6 inline-block ${i % 2 === 0 ? 'md:ml-auto' : ''}`}>
-                    <h3 className="font-display font-semibold text-xl text-foreground mb-2">{step.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+                    <h3 className="font-display font-semibold text-xl text-foreground mb-2">
+                      <span className="mr-2">{stepNumbers[i]}</span>{step.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">{step.description}</p>
+                    <p className="text-primary text-sm font-semibold italic">{step.outcome}</p>
                   </div>
                 </div>
                 <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary/20 border border-primary/30 items-center justify-center">
