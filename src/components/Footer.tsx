@@ -18,8 +18,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src={dxsLogo} alt="DXS" className="w-8 h-8 object-contain" />
-            <span className="font-display font-semibold text-lg text-foreground">DXS</span>
+            <img src={dxsLogo} alt="DXS" className="w-16 h-auto object-contain" />
           </div>
 
           {/* Quick links */}

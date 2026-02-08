@@ -10,11 +10,11 @@ export const translations = {
       bookConsultation: 'Book Consultation',
     },
     hero: {
-      title: 'AI-Enhanced Websites & Smart Workflows for Modern Businesses',
-      subtitle: 'DXS builds sleek websites with AI automation to help businesses save time, streamline operations, and convert more customers.',
+      title: 'AI-Powered Websites That Automate Your Business',
+      subtitle: 'We design and build smart websites with AI automation to save time, streamline operations, and increase conversions — without adding complexity.',
       cta: 'Book a Free Consultation',
       ctaSecondary: 'See Packages',
-      trustedBy: 'Trusted by forward-thinking businesses',
+      trustedBy: 'Trusted by forward-thinking businesses & technology partners',
     },
     whoWeServe: {
       title: 'Who We Serve',
@@ -36,19 +36,22 @@ export const translations = {
     },
     howItWorks: {
       title: 'How It Works',
-      subtitle: 'From vision to launch in three streamlined steps',
+      subtitle: 'A simple, proven process to build smart systems that scale with your business.',
       steps: [
         {
-          title: 'Discover',
-          description: 'We learn your business goals, audience, and pain points to design the perfect digital strategy.',
+          title: 'Discover & Strategy',
+          description: 'We analyse your business, customer journey, and tools to identify where automation and AI will have the biggest impact.',
+          outcome: 'Clear plan. No wasted features.',
         },
         {
-          title: 'Build',
-          description: 'Our team creates your AI-enhanced website and configures smart workflows tailored to your operations.',
+          title: 'Build & Integrate',
+          description: 'We design and build your website, AI assistant, and workflows — integrating CRM, email, WhatsApp, calendars, and payment tools.',
+          outcome: 'Everything connected. Everything automated.',
         },
         {
-          title: 'Optimise',
-          description: 'We continuously refine, automate, and improve — ensuring your digital presence evolves with your business.',
+          title: 'Optimise & Scale',
+          description: 'We test, refine, and optimise performance over time — improving conversions, automation accuracy, and efficiency.',
+          outcome: 'Automatically filters, books, and routes prospects — so you only speak to high-intent leads while the system handles the rest.',
         },
       ],
       cta: 'Book a Discovery Call',
@@ -230,11 +233,11 @@ export const translations = {
       bookConsultation: 'Prenota Consulenza',
     },
     hero: {
-      title: 'Siti Web Potenziati dall\'AI e Workflow Intelligenti per le Aziende Moderne',
-      subtitle: 'DXS crea siti web eleganti con automazione AI per aiutare le aziende a risparmiare tempo, ottimizzare le operazioni e convertire più clienti.',
+      title: 'Siti Web AI che Automatizzano il Tuo Business',
+      subtitle: 'Progettiamo e costruiamo siti web intelligenti con automazione AI per risparmiare tempo, ottimizzare le operazioni e aumentare le conversioni — senza aggiungere complessità.',
       cta: 'Prenota una Consulenza Gratuita',
       ctaSecondary: 'Vedi i Pacchetti',
-      trustedBy: 'Scelto da aziende innovative',
+      trustedBy: 'Scelto da aziende innovative e partner tecnologici',
     },
     whoWeServe: {
       title: 'Chi Serviamo',
@@ -256,19 +259,22 @@ export const translations = {
     },
     howItWorks: {
       title: 'Come Funziona',
-      subtitle: 'Dalla visione al lancio in tre semplici passi',
+      subtitle: 'Un processo semplice e collaudato per costruire sistemi intelligenti che crescono con il tuo business.',
       steps: [
         {
-          title: 'Scoperta',
-          description: 'Comprendiamo i tuoi obiettivi, il tuo pubblico e le sfide per progettare la strategia digitale perfetta.',
+          title: 'Scoperta & Strategia',
+          description: 'Analizziamo il tuo business, il percorso cliente e gli strumenti per identificare dove automazione e AI avranno il maggior impatto.',
+          outcome: 'Piano chiaro. Nessuna funzionalità sprecata.',
         },
         {
-          title: 'Costruzione',
-          description: 'Il nostro team crea il tuo sito web potenziato dall\'AI e configura workflow intelligenti su misura.',
+          title: 'Costruzione & Integrazione',
+          description: 'Progettiamo e costruiamo il tuo sito web, assistente AI e workflow — integrando CRM, email, WhatsApp, calendari e strumenti di pagamento.',
+          outcome: 'Tutto connesso. Tutto automatizzato.',
         },
         {
-          title: 'Ottimizzazione',
-          description: 'Miglioriamo, automatizziamo e perfezioniamo continuamente per far evolvere la tua presenza digitale.',
+          title: 'Ottimizzazione & Crescita',
+          description: 'Testiamo, perfezioniamo e ottimizziamo le performance nel tempo — migliorando conversioni, precisione dell\'automazione ed efficienza.',
+          outcome: 'Filtra, prenota e indirizza automaticamente i prospect — così parli solo con lead ad alto potenziale mentre il sistema gestisce il resto.',
         },
       ],
       cta: 'Prenota una Chiamata',

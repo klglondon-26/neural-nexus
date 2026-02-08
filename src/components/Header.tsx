@@ -26,8 +26,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <img src={dxsLogo} alt="DXS" className="h-9 w-9 object-contain" />
-          <span className="font-display font-semibold text-lg text-foreground">DXS</span>
+          <img src={dxsLogo} alt="DXS" className="h-12 w-auto object-contain" />
         </a>
 
         {/* Desktop nav */}

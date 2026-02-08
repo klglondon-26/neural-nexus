@@ -12,7 +12,7 @@ import FAQ from '@/components/FAQ';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-
+import ContactForm from '@/components/ContactForm';
 
 const Index = () => {
   return (
@@ -28,12 +28,12 @@ const Index = () => {
         <Pricing />
         <Workflows />
         <Partners />
+        <ContactForm />
         <FAQ />
         <FinalCTA />
       </main>
       <Footer />
       <WhatsAppButton />
-      
     </div>
   );
 };
