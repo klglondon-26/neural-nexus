@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import dxsLogo from '@/assets/dxs-logo.png';
-import TrustedByMarquee from './TrustedByMarquee';
+
 
 const CALENDLY_URL = 'https://calendly.com/stephenoffice21/30min';
 
@@ -60,24 +60,7 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="mt-12 text-xs text-muted-foreground tracking-widest uppercase"
-        >
-          {hero.trustedBy}
-        </motion.p>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="w-full mt-4 mb-4"
-      >
-        <TrustedByMarquee />
-      </motion.div>
     </section>
   );
 };
