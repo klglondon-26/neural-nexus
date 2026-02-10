@@ -13,6 +13,7 @@ import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ContactForm from '@/components/ContactForm';
+import TrustedByMarquee from '@/components/TrustedByMarquee';
 
 const Index = () => {
   return (
@@ -29,6 +30,12 @@ const Index = () => {
         <Workflows />
         <Partners />
         <ContactForm />
+        <section className="relative z-10 py-12">
+          <div className="section-container text-center mb-6">
+            <p className="text-xs text-muted-foreground tracking-widest uppercase">Trusted by forward-thinking businesses & technology partners</p>
+          </div>
+          <TrustedByMarquee />
+        </section>
         <FAQ />
         <FinalCTA />
       </main>

@@ -4,11 +4,13 @@ import googleLogo from '@/assets/partners/google-workspace.png';
 import metaLogo from '@/assets/partners/meta.png';
 import makeLogo from '@/assets/partners/make.png';
 import n8nLogo from '@/assets/partners/n8n.png';
+import calendlyLogo from '@/assets/partners/calendly.png';
+import whatsappLogo from '@/assets/partners/whatsapp.png';
 
 const tools = [
   { name: 'Stripe', logo: stripeLogo },
-  { name: 'Calendly', icon: '📅' },
-  { name: 'WhatsApp Business', icon: '💬' },
+  { name: 'Calendly', logo: calendlyLogo },
+  { name: 'WhatsApp Business', logo: whatsappLogo },
   { name: 'Google Workspace', logo: googleLogo },
   { name: 'HubSpot', icon: '🟠' },
   { name: 'Meta', logo: metaLogo },
