@@ -21,7 +21,7 @@ const Workflows = () => {
           <p className="text-muted-foreground max-w-xl mx-auto">{section.subtitle}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {section.items.map((item: any, i: number) => (
             <motion.div
               key={i}

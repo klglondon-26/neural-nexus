@@ -2,7 +2,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import dxsLogo from '@/assets/dxs-logo.png';
 
-
 const CALENDLY_URL = 'https://calendly.com/stephenoffice21/30min';
 
 const Hero = () => {
@@ -60,6 +59,20 @@ const Hero = () => {
           </a>
         </motion.div>
 
+        {/* Trust bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+          className="flex flex-col sm:flex-row gap-6 sm:gap-10 mt-14"
+        >
+          {hero.stats.map((stat: any, i: number) => (
+            <div key={i} className="text-center">
+              <p className="font-display font-bold text-2xl gradient-text">{stat.value}</p>
+              <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

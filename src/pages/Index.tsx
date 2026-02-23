@@ -2,10 +2,12 @@ import InteractiveNeuralVortex from '@/components/InteractiveNeuralVortex';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import WhoWeServe from '@/components/WhoWeServe';
+import PainPoints from '@/components/PainPoints';
 import HowItWorks from '@/components/HowItWorks';
 import WhatWeBuild from '@/components/WhatWeBuild';
 import ServicesCarousel from '@/components/ServicesCarousel';
 import Pricing from '@/components/Pricing';
+import BeforeAfter from '@/components/BeforeAfter';
 import Workflows from '@/components/Workflows';
 import Partners from '@/components/Partners';
 import FAQ from '@/components/FAQ';
@@ -23,10 +25,12 @@ const Index = () => {
       <main>
         <Hero />
         <WhoWeServe />
+        <PainPoints />
         <HowItWorks />
         <WhatWeBuild />
         <ServicesCarousel />
         <Pricing />
+        <BeforeAfter />
         <Workflows />
         <Partners />
         <ContactForm />
