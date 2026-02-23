@@ -1,58 +1,26 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
-import { Send, Users, Handshake } from 'lucide-react';
+import { Send, Users, Gift, ChevronDown } from 'lucide-react';
 
 const ContactForm = () => {
-  const { language } = useLanguage();
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState<'client' | 'partner'>('client');
-  const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: '', email: '', company: '',
+    businessType: '', challenge: '', optional: ''
+  });
   const [submitted, setSubmitted] = useState(false);
 
-  const content = {
-    en: {
-      title: 'Work With Us',
-      subtitle: 'Ready to get started? Fill in the form below and we\'ll be in touch.',
-      clientTab: 'I\'m a Client',
-      partnerTab: 'I\'m a Partner',
-      clientDesc: 'Tell us about your project and we\'ll create a smart system tailored to your business.',
-      partnerDesc: 'Interested in collaborating? Let us know how we can work together.',
-      name: 'Full Name',
-      email: 'Email Address',
-      company: 'Company Name',
-      messageLabel: 'Your Message',
-      clientPlaceholder: 'Tell us about your business goals, current challenges, and what you\'d like to achieve...',
-      partnerPlaceholder: 'Tell us about your agency/service, how you\'d like to collaborate, and any relevant experience...',
-      send: 'Send Message',
-      success: 'Thank you! We\'ll be in touch within 24 hours.',
-    },
-    it: {
-      title: 'Lavora con Noi',
-      subtitle: 'Pronto per iniziare? Compila il modulo e ti contatteremo.',
-      clientTab: 'Sono un Cliente',
-      partnerTab: 'Sono un Partner',
-      clientDesc: 'Raccontaci del tuo progetto e creeremo un sistema su misura per il tuo business.',
-      partnerDesc: 'Interessato a collaborare? Facci sapere come possiamo lavorare insieme.',
-      name: 'Nome Completo',
-      email: 'Indirizzo Email',
-      company: 'Nome Azienda',
-      messageLabel: 'Il Tuo Messaggio',
-      clientPlaceholder: 'Raccontaci i tuoi obiettivi di business, le sfide attuali e cosa vorresti raggiungere...',
-      partnerPlaceholder: 'Raccontaci della tua agenzia/servizio, come vorresti collaborare e la tua esperienza...',
-      send: 'Invia Messaggio',
-      success: 'Grazie! Ti contatteremo entro 24 ore.',
-    },
-  };
-
-  const t = content[language];
+  const c = t('contact');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent(
-      activeTab === 'client' ? 'New Client Enquiry — DXS' : 'New Partner Enquiry — DXS'
+      activeTab === 'client' ? 'New Client Enquiry — DXS' : 'New Referral Partner Enquiry — DXS'
     );
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nType: ${activeTab}\n\nMessage:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nType: ${activeTab}\nBusiness Type: ${formData.businessType}\nBiggest Challenge: ${formData.challenge}\n\nAdditional Info:\n${formData.optional}`
     );
     window.open(`mailto:info@digitalxstudio.com?cc=stephenoffice21@gmail.com&subject=${subject}&body=${body}`, '_self');
     setSubmitted(true);
@@ -68,8 +36,8 @@ const ContactForm = () => {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-3">{t.title}</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">{t.subtitle}</p>
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-3">{c.title}</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">{c.subtitle}</p>
         </motion.div>
 
         <motion.div
@@ -88,7 +56,7 @@ const ContactForm = () => {
                   : 'border border-border/50 text-muted-foreground hover:text-foreground'
               }`}
             >
-              <Users size={16} /> {t.clientTab}
+              <Users size={16} /> {c.clientTab}
             </button>
             <button
               onClick={() => setActiveTab('partner')}
@@ -98,62 +66,86 @@ const ContactForm = () => {
                   : 'border border-border/50 text-muted-foreground hover:text-foreground'
               }`}
             >
-              <Handshake size={16} /> {t.partnerTab}
+              <Gift size={16} /> {c.partnerTab}
             </button>
           </div>
 
           <p className="text-sm text-muted-foreground mb-6">
-            {activeTab === 'client' ? t.clientDesc : t.partnerDesc}
+            {activeTab === 'client' ? c.clientDesc : c.partnerDesc}
           </p>
 
           {submitted ? (
             <div className="text-center py-8">
-              <p className="text-primary font-semibold text-lg">{t.success}</p>
+              <p className="text-primary font-semibold text-lg">{c.success}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <input
-                  type="text"
-                  required
-                  maxLength={100}
-                  placeholder={t.name}
+                  type="text" required maxLength={100} placeholder={c.name}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
                 />
                 <input
-                  type="email"
-                  required
-                  maxLength={255}
-                  placeholder={t.email}
+                  type="email" required maxLength={255} placeholder={c.email}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
                 />
               </div>
               <input
-                type="text"
-                maxLength={100}
-                placeholder={t.company}
+                type="text" maxLength={100} placeholder={c.company}
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                 className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
               />
-              <textarea
-                required
-                maxLength={1000}
-                rows={5}
-                placeholder={activeTab === 'client' ? t.clientPlaceholder : t.partnerPlaceholder}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors resize-none"
+
+              {/* Business type dropdown */}
+              <div className="relative">
+                <select
+                  required
+                  value={formData.businessType}
+                  onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors appearance-none"
+                >
+                  <option value="" disabled className="text-muted-foreground">{c.businessType}</option>
+                  {c.businessOptions.map((opt: string, i: number) => (
+                    <option key={i} value={opt}>{opt}</option>
+                  ))}
+                </select>
+                <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+              </div>
+
+              {/* Challenge dropdown */}
+              <div className="relative">
+                <select
+                  required
+                  value={formData.challenge}
+                  onChange={(e) => setFormData({ ...formData, challenge: e.target.value })}
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors appearance-none"
+                >
+                  <option value="" disabled className="text-muted-foreground">{c.challenge}</option>
+                  {c.challengeOptions.map((opt: string, i: number) => (
+                    <option key={i} value={opt}>{opt}</option>
+                  ))}
+                </select>
+                <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+              </div>
+
+              {/* Optional text */}
+              <input
+                type="text" maxLength={500} placeholder={c.optional}
+                value={formData.optional}
+                onChange={(e) => setFormData({ ...formData, optional: e.target.value })}
+                className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
               />
+
               <button
                 type="submit"
                 className="w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
               >
-                <Send size={16} /> {t.send}
+                <Send size={16} /> {c.send}
               </button>
             </form>
           )}
