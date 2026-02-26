@@ -10,7 +10,7 @@ export const translations = {
       bookConsultation: 'Book Consultation',
     },
     hero: {
-      title: 'Stop Losing Time to Tasks Your Business Should Handle Automatically',
+      title: 'Automation Built for Business.',
       subtitle: 'We build AI-powered websites and automation systems that handle your enquiries, bookings, follow-ups, and workflows — so you focus on growing your business, not running it.',
       cta: 'Book a Free Consultation',
       ctaSecondary: 'See Packages',
