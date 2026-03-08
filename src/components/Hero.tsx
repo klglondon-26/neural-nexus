@@ -52,7 +52,7 @@ const Hero = () => {
             {hero.cta}
           </button>
           <a
-            href="#pricing"
+            href="#how-it-works"
             className="px-8 py-4 rounded-xl border border-border/60 text-foreground font-semibold text-base hover:bg-secondary transition-all"
           >
             {hero.ctaSecondary}
