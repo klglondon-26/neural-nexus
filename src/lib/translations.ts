@@ -3,23 +3,25 @@ export const translations = {
     nav: {
       services: 'Services',
       howItWorks: 'How It Works',
-      pricing: 'Pricing',
       workflows: 'Workflows',
       partners: 'Work With Us',
       faq: 'FAQ',
-      bookConsultation: 'Book Consultation',
+      bookConsultation: 'Book Your Free AI Audit Call',
     },
     hero: {
-      title: 'Automation Built for Business.',
-      subtitle: 'We build AI-powered websites and automation systems that handle your enquiries, bookings, follow-ups, and workflows — so you focus on growing your business, not running it.',
-      cta: 'Book a Free Consultation',
-      ctaSecondary: 'See Packages',
+      title: 'Your Business Should Run While You Sleep',
+      subtitle: 'We build AI-powered systems that handle your enquiries, bookings, follow-ups, and workflows — so you focus on growing your business, not running it.',
+      cta: 'Book Your Free AI Audit Call',
+      ctaSecondary: 'See How It Works',
       trustedBy: 'Trusted by forward-thinking businesses & technology partners',
       stats: [
-        { value: '48hr', label: 'Average Build Start' },
-        { value: '100+', label: 'Tools We Integrate' },
-        { value: '24/7', label: 'Systems That Never Sleep' },
+        { value: '15+', label: 'Hours Saved Per Week' },
+        { value: '60%', label: 'Admin Reduction' },
+        { value: '<2min', label: 'Average Response Time' },
       ],
+    },
+    messenger: {
+      label: 'Reach us instantly',
     },
     whoWeServe: {
       title: 'Who We Serve',
@@ -69,7 +71,7 @@ export const translations = {
           outcome: 'Automatically filters, books, and routes prospects — so you only speak to high-intent leads while the system handles the rest.',
         },
       ],
-      cta: 'Book a Discovery Call',
+      cta: 'Book Your Free AI Audit Call',
     },
     whatWeBuild: {
       title: 'What We Build',
@@ -106,60 +108,6 @@ export const translations = {
         { title: 'Automation Across Platforms', description: 'End-to-end workflows connecting all your business tools.' },
         { title: 'Marketing Assets & Digital Presence', description: 'Professional branding materials that elevate your image.' },
         { title: 'Continuous Improvement Support', description: 'Ongoing optimisation to keep your digital presence ahead of the curve.' },
-      ],
-    },
-    pricing: {
-      title: 'Pricing',
-      subtitle: 'Transparent packages designed for every stage of growth',
-      oneTime: 'One-Time Build Packages',
-      recurring: 'Optional Recurring Maintenance & Support',
-      recurringNote: 'All Care plans require an active DXS-built system. Minimum 3-month commitment. Cancel anytime after.',
-      bookCta: 'Book Consultation',
-      whatsIncluded: "What's Included",
-      packages: [
-        {
-          name: 'Foundation AI Website',
-          price: '£997',
-          perfectFor: 'Perfect for service businesses ready to stop missing leads and make a professional first impression.',
-          features: ['5-page responsive website', 'Basic AI chatbot', 'Contact form integration', 'Mobile-optimised design', 'SEO fundamentals', '2 rounds of revisions'],
-        },
-        {
-          name: 'Advanced Business Website',
-          price: '£1,997',
-          perfectFor: 'For businesses ready to put their sales, bookings, and follow-ups on autopilot.',
-          popular: true,
-          features: ['10-page responsive website', 'Advanced AI assistant', 'CRM integration', 'Booking system (Calendly)', 'WhatsApp Business setup', 'Email automation', 'Analytics dashboard', '4 rounds of revisions'],
-        },
-        {
-          name: 'Enterprise AI Website',
-          price: '£2,996',
-          perfectFor: 'Full automation suite for established businesses who want every system connected and running without manual input.',
-          bestValue: true,
-          features: ['Unlimited pages', 'Custom AI assistant with training', 'Full workflow automation', 'Multi-platform integrations', 'Custom API connections', 'Priority build timeline', 'Dedicated project manager', 'Unlimited revisions'],
-        },
-        {
-          name: 'Custom Enterprise Solution',
-          price: 'From £5,000+',
-          perfectFor: 'For organisations with complex, multi-department requirements and bespoke integration needs.',
-          features: ['Bespoke architecture', 'Enterprise-grade security', 'Custom AI models', 'Multi-department workflows', 'White-label options', 'SLA guarantees', 'Ongoing strategic consulting'],
-        },
-      ],
-      maintenance: [
-        {
-          name: 'Essential Care',
-          price: '£127/month',
-          features: ['Security & performance monitoring', 'Monthly AI tuning', 'Bug fixes & updates', 'Email support'],
-        },
-        {
-          name: 'Growth Care',
-          price: '£227/month',
-          features: ['Everything in Essential', 'Bi-weekly AI prompt refinement', 'Workflow optimisation', 'Priority email support', 'Monthly performance report'],
-        },
-        {
-          name: 'Strategic Care',
-          price: '£397/month',
-          features: ['Everything in Growth', 'Weekly AI & workflow tuning', 'Dedicated account manager', 'Phone & video support', 'Monthly strategy sessions'],
-        },
       ],
     },
     beforeAfter: {
@@ -255,7 +203,7 @@ export const translations = {
     finalCta: {
       title: 'Every day without automation is a day of revenue left on the table.',
       subtitle: "Book a free 30-minute audit. We'll show you exactly where your business is losing time and money — and how to fix it.",
-      cta: 'Book Your Free Audit — No Commitment',
+      cta: 'Book Your Free AI Audit Call',
       ctaSecondary: 'Message on WhatsApp',
     },
     footer: {
@@ -266,7 +214,7 @@ export const translations = {
     ai: {
       greeting: "Hi! I'm the DXS assistant. How can I help you today?",
       placeholder: 'Ask about our services...',
-      quickActions: ['Compare Packages', 'Book a Call', 'Message on WhatsApp', 'Talk to a Specialist'],
+      quickActions: ['Book Your Free AI Audit Call', 'Message on WhatsApp', 'Talk to a Specialist'],
     },
     whatsapp: {
       message: "Hi, I'm interested in learning more about DXS services",
