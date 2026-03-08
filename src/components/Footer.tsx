@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Quick links */}
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <a href="#services" className="hover:text-foreground transition-colors">{nav.services}</a>
-            <a href="#pricing" className="hover:text-foreground transition-colors">{nav.pricing}</a>
+            <a href="#how-it-works" className="hover:text-foreground transition-colors">{nav.howItWorks}</a>
             <a href="#faq" className="hover:text-foreground transition-colors">{nav.faq}</a>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">WhatsApp</a>
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Calendly</a>

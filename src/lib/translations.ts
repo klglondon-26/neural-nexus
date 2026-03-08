@@ -224,23 +224,25 @@ export const translations = {
     nav: {
       services: 'Servizi',
       howItWorks: 'Come Funziona',
-      pricing: 'Prezzi',
       workflows: 'Workflow',
       partners: 'Lavora Con Noi',
       faq: 'FAQ',
-      bookConsultation: 'Prenota Consulenza',
+      bookConsultation: 'Prenota il Tuo Audit AI Gratuito',
     },
     hero: {
-      title: 'Smetti di Perdere Tempo in Attività Che il Tuo Business Dovrebbe Gestire Automaticamente',
-      subtitle: 'Costruiamo siti web con AI e sistemi di automazione che gestiscono richieste, prenotazioni, follow-up e workflow — così ti concentri sulla crescita, non sulla gestione.',
-      cta: 'Prenota una Consulenza Gratuita',
-      ctaSecondary: 'Vedi i Pacchetti',
+      title: 'Il Tuo Business Dovrebbe Funzionare Mentre Dormi',
+      subtitle: 'Costruiamo sistemi AI che gestiscono richieste, prenotazioni, follow-up e workflow — così ti concentri sulla crescita, non sulla gestione.',
+      cta: 'Prenota il Tuo Audit AI Gratuito',
+      ctaSecondary: 'Scopri Come Funziona',
       trustedBy: 'Scelto da aziende innovative e partner tecnologici',
       stats: [
-        { value: '48h', label: 'Inizio Medio Progetto' },
-        { value: '100+', label: 'Strumenti Integrati' },
-        { value: '24/7', label: 'Sistemi Sempre Attivi' },
+        { value: '15+', label: 'Ore Risparmiate a Settimana' },
+        { value: '60%', label: 'Riduzione Admin' },
+        { value: '<2min', label: 'Tempo Medio di Risposta' },
       ],
+    },
+    messenger: {
+      label: 'Contattaci subito',
     },
     whoWeServe: {
       title: 'Chi Serviamo',
@@ -290,7 +292,7 @@ export const translations = {
           outcome: 'Filtra, prenota e indirizza automaticamente i prospect — così parli solo con lead ad alto potenziale mentre il sistema gestisce il resto.',
         },
       ],
-      cta: 'Prenota una Chiamata',
+      cta: 'Prenota il Tuo Audit AI Gratuito',
     },
     whatWeBuild: {
       title: 'Cosa Costruiamo',
@@ -327,60 +329,6 @@ export const translations = {
         { title: 'Automazione Multi-Piattaforma', description: 'Workflow end-to-end che collegano tutti i tuoi strumenti aziendali.' },
         { title: 'Asset Marketing & Presenza Digitale', description: 'Materiali di branding professionali che elevano la tua immagine.' },
         { title: 'Supporto e Miglioramento Continuo', description: 'Ottimizzazione continua per mantenere la tua presenza digitale al top.' },
-      ],
-    },
-    pricing: {
-      title: 'Prezzi',
-      subtitle: 'Pacchetti trasparenti per ogni fase di crescita',
-      oneTime: 'Pacchetti di Costruzione',
-      recurring: 'Manutenzione e Supporto Opzionale',
-      recurringNote: 'Tutti i piani Care richiedono un sistema DXS attivo. Impegno minimo 3 mesi. Cancellazione possibile dopo.',
-      bookCta: 'Prenota Consulenza',
-      whatsIncluded: 'Cosa Include',
-      packages: [
-        {
-          name: 'Sito AI Foundation',
-          price: '£997',
-          perfectFor: 'Perfetto per aziende di servizi pronte a non perdere più lead e fare una prima impressione professionale.',
-          features: ['Sito responsive 5 pagine', 'Chatbot AI base', 'Integrazione modulo contatto', 'Design ottimizzato mobile', 'Fondamenti SEO', '2 giri di revisioni'],
-        },
-        {
-          name: 'Sito Business Avanzato',
-          price: '£1,997',
-          perfectFor: 'Per aziende pronte a mettere vendite, prenotazioni e follow-up in automatico.',
-          popular: true,
-          features: ['Sito responsive 10 pagine', 'Assistente AI avanzato', 'Integrazione CRM', 'Sistema prenotazioni (Calendly)', 'Setup WhatsApp Business', 'Automazione email', 'Dashboard analytics', '4 giri di revisioni'],
-        },
-        {
-          name: 'Sito AI Enterprise',
-          price: '£2,996',
-          perfectFor: 'Suite di automazione completa per aziende che vogliono ogni sistema connesso e funzionante senza input manuale.',
-          bestValue: true,
-          features: ['Pagine illimitate', 'Assistente AI personalizzato', 'Automazione workflow completa', 'Integrazioni multi-piattaforma', 'Connessioni API personalizzate', 'Timeline prioritaria', 'Project manager dedicato', 'Revisioni illimitate'],
-        },
-        {
-          name: 'Soluzione Enterprise Custom',
-          price: 'Da £5,000+',
-          perfectFor: 'Per organizzazioni con requisiti complessi, multi-dipartimento e integrazioni su misura.',
-          features: ['Architettura su misura', 'Sicurezza enterprise', 'Modelli AI personalizzati', 'Workflow multi-dipartimento', 'Opzioni white-label', 'Garanzie SLA', 'Consulenza strategica continua'],
-        },
-      ],
-      maintenance: [
-        {
-          name: 'Essential Care',
-          price: '£127/mese',
-          features: ['Monitoraggio sicurezza e performance', 'Tuning AI mensile', 'Correzione bug e aggiornamenti', 'Supporto email'],
-        },
-        {
-          name: 'Growth Care',
-          price: '£227/mese',
-          features: ['Tutto in Essential', 'Affinamento AI bisettimanale', 'Ottimizzazione workflow', 'Supporto email prioritario', 'Report performance mensile'],
-        },
-        {
-          name: 'Strategic Care',
-          price: '£397/mese',
-          features: ['Tutto in Growth', 'Tuning AI e workflow settimanale', 'Account manager dedicato', 'Supporto telefono e video', 'Sessioni strategiche mensili'],
-        },
       ],
     },
     beforeAfter: {
@@ -476,7 +424,7 @@ export const translations = {
     finalCta: {
       title: 'Ogni giorno senza automazione è un giorno di fatturato lasciato sul tavolo.',
       subtitle: 'Prenota un audit gratuito di 30 minuti. Ti mostreremo esattamente dove il tuo business sta perdendo tempo e soldi — e come risolvere.',
-      cta: 'Prenota il Tuo Audit Gratuito',
+      cta: 'Prenota il Tuo Audit AI Gratuito',
       ctaSecondary: 'Scrivici su WhatsApp',
     },
     footer: {
@@ -487,7 +435,7 @@ export const translations = {
     ai: {
       greeting: "Ciao! Sono l'assistente DXS. Come posso aiutarti oggi?",
       placeholder: 'Chiedi dei nostri servizi...',
-      quickActions: ['Confronta Pacchetti', 'Prenota una Chiamata', 'Scrivi su WhatsApp', 'Parla con uno Specialista'],
+      quickActions: ['Prenota il Tuo Audit AI Gratuito', 'Scrivi su WhatsApp', 'Parla con uno Specialista'],
     },
     whatsapp: {
       message: 'Ciao, sono interessato a saperne di più sui servizi DXS',

@@ -13,7 +13,6 @@ const Header = () => {
   const links = [
     { label: nav.services, href: '#services' },
     { label: nav.howItWorks, href: '#how-it-works' },
-    { label: nav.pricing, href: '#pricing' },
     { label: nav.workflows, href: '#workflows' },
     { label: nav.partners, href: '#partners' },
     { label: nav.faq, href: '#faq' },
