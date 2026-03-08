@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 import { MessageCircle, Send } from 'lucide-react';
 
 const MessengerBar = () => {
-  const { t, language } = useLanguage();
-  const messenger = t('messenger' as any) as any;
+  const { language } = useLanguage();
 
   const whatsappUrl = language === 'it'
     ? 'https://wa.me/447588897549?text=Ciao%2C%20sono%20interessato%20a%20saperne%20di%20pi%C3%B9%20sui%20servizi%20DXS'
     : 'https://wa.me/447588897549?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20DXS%20services';
 
   const telegramUrl = 'https://t.me/digitalxstudio';
+  const label = language === 'it' ? 'Contattaci subito' : 'Reach us instantly';
 
   return (
     <motion.div
@@ -20,7 +20,7 @@ const MessengerBar = () => {
       className="relative z-10 flex justify-center pb-16"
     >
       <div className="flex items-center gap-3 px-6 py-3 rounded-2xl border border-border/40 bg-card/50 backdrop-blur-sm">
-        <span className="text-sm text-muted-foreground hidden sm:inline">{messenger?.label ?? 'Reach us instantly'}</span>
+        <span className="text-sm text-muted-foreground hidden sm:inline">{label}</span>
         <a
           href={whatsappUrl}
           target="_blank"
