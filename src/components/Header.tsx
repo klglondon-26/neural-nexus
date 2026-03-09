@@ -21,7 +21,15 @@ const Header = () => {
   const openCalendly = () => window.open(CALENDLY_URL, '_blank');
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-xl border-b border-border/30">
+    <header
+      className="fixed top-0 left-0 right-0 z-50"
+      style={{
+        backgroundColor: 'rgba(3,6,15,0.88)',
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
+        borderBottom: '1px solid rgba(255,255,255,0.07)',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
@@ -44,7 +52,7 @@ const Header = () => {
         {/* Right side */}
         <div className="flex items-center gap-3">
           {/* Language toggle */}
-          <div className="flex items-center border border-border/50 rounded-lg overflow-hidden text-xs">
+          <div className="flex items-center border border-[rgba(255,255,255,0.07)] rounded-[3px] overflow-hidden text-xs">
             <button
               onClick={() => setLanguage('en')}
               className={`px-2.5 py-1.5 transition-colors ${language === 'en' ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:text-foreground'}`}
@@ -62,7 +70,7 @@ const Header = () => {
           {/* CTA */}
           <button
             onClick={openCalendly}
-            className="hidden sm:inline-flex px-4 py-2 text-sm font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="hidden sm:inline-flex btn-primary text-sm"
           >
             {nav.bookConsultation}
           </button>
@@ -79,7 +87,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-border/30 px-6 pb-6">
+        <div className="lg:hidden px-6 pb-6" style={{ backgroundColor: 'rgba(3,6,15,0.95)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <nav className="flex flex-col gap-3 pt-2">
             {links.map((link) => (
               <a
@@ -93,7 +101,7 @@ const Header = () => {
             ))}
             <button
               onClick={() => { openCalendly(); setMobileOpen(false); }}
-              className="mt-2 px-4 py-2.5 text-sm font-medium rounded-lg bg-primary text-primary-foreground"
+              className="mt-2 btn-primary text-sm"
             >
               {nav.bookConsultation}
             </button>

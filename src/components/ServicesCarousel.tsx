@@ -25,7 +25,7 @@ const ServicesCarousel = () => {
   };
 
   return (
-    <section className="section-padding relative z-10">
+    <section className="section-padding">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,13 +34,14 @@ const ServicesCarousel = () => {
           className="flex items-end justify-between mb-10"
         >
           <div>
+            <p className="section-label">Our Services</p>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-2">{section.title}</h2>
           </div>
           <div className="hidden sm:flex gap-2">
-            <button onClick={() => scroll(-1)} disabled={!canScrollLeft} className="p-2 rounded-lg border border-border/50 text-muted-foreground hover:text-foreground disabled:opacity-30 transition-all">
+            <button onClick={() => scroll(-1)} disabled={!canScrollLeft} className="p-2 rounded-[3px] border border-[rgba(255,255,255,0.07)] text-muted-foreground hover:text-foreground disabled:opacity-30 transition-all">
               <ChevronLeft size={18} />
             </button>
-            <button onClick={() => scroll(1)} disabled={!canScrollRight} className="p-2 rounded-lg border border-border/50 text-muted-foreground hover:text-foreground disabled:opacity-30 transition-all">
+            <button onClick={() => scroll(1)} disabled={!canScrollRight} className="p-2 rounded-[3px] border border-[rgba(255,255,255,0.07)] text-muted-foreground hover:text-foreground disabled:opacity-30 transition-all">
               <ChevronRight size={18} />
             </button>
           </div>

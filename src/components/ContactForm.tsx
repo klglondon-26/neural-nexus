@@ -28,7 +28,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="section-padding relative z-10">
+    <section id="contact" className="section-padding">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,6 +36,7 @@ const ContactForm = () => {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
+          <p className="section-label">Contact</p>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-3">{c.title}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">{c.subtitle}</p>
         </motion.div>
@@ -50,20 +51,20 @@ const ContactForm = () => {
           <div className="flex gap-2 mb-6">
             <button
               onClick={() => setActiveTab('client')}
-              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium transition-all ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-[3px] text-sm font-medium transition-all ${
                 activeTab === 'client'
                   ? 'bg-primary text-primary-foreground'
-                  : 'border border-border/50 text-muted-foreground hover:text-foreground'
+                  : 'border border-[rgba(255,255,255,0.07)] text-muted-foreground hover:text-foreground'
               }`}
             >
               <Users size={16} /> {c.clientTab}
             </button>
             <button
               onClick={() => setActiveTab('partner')}
-              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium transition-all ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-[3px] text-sm font-medium transition-all ${
                 activeTab === 'partner'
                   ? 'bg-accent text-accent-foreground'
-                  : 'border border-border/50 text-muted-foreground hover:text-foreground'
+                  : 'border border-[rgba(255,255,255,0.07)] text-muted-foreground hover:text-foreground'
               }`}
             >
               <Gift size={16} /> {c.partnerTab}
@@ -85,20 +86,20 @@ const ContactForm = () => {
                   type="text" required maxLength={100} placeholder={c.name}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
+                  className="w-full px-4 py-3 rounded-[3px] bg-secondary/50 border border-[rgba(255,255,255,0.07)] text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
                 />
                 <input
                   type="email" required maxLength={255} placeholder={c.email}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
+                  className="w-full px-4 py-3 rounded-[3px] bg-secondary/50 border border-[rgba(255,255,255,0.07)] text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
                 />
               </div>
               <input
                 type="text" maxLength={100} placeholder={c.company}
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
+                className="w-full px-4 py-3 rounded-[3px] bg-secondary/50 border border-[rgba(255,255,255,0.07)] text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
               />
 
               {/* Business type dropdown */}
@@ -107,7 +108,7 @@ const ContactForm = () => {
                   required
                   value={formData.businessType}
                   onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors appearance-none"
+                  className="w-full px-4 py-3 rounded-[3px] bg-secondary/50 border border-[rgba(255,255,255,0.07)] text-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors appearance-none"
                 >
                   <option value="" disabled className="text-muted-foreground">{c.businessType}</option>
                   {c.businessOptions.map((opt: string, i: number) => (
@@ -123,7 +124,7 @@ const ContactForm = () => {
                   required
                   value={formData.challenge}
                   onChange={(e) => setFormData({ ...formData, challenge: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors appearance-none"
+                  className="w-full px-4 py-3 rounded-[3px] bg-secondary/50 border border-[rgba(255,255,255,0.07)] text-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors appearance-none"
                 >
                   <option value="" disabled className="text-muted-foreground">{c.challenge}</option>
                   {c.challengeOptions.map((opt: string, i: number) => (
@@ -138,12 +139,12 @@ const ContactForm = () => {
                 type="text" maxLength={500} placeholder={c.optional}
                 value={formData.optional}
                 onChange={(e) => setFormData({ ...formData, optional: e.target.value })}
-                className="w-full px-4 py-3 rounded-lg bg-secondary/50 border border-border/40 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
+                className="w-full px-4 py-3 rounded-[3px] bg-secondary/50 border border-[rgba(255,255,255,0.07)] text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:border-primary/50 transition-colors"
               />
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-all flex items-center justify-center gap-2"
+                className="w-full btn-primary flex items-center justify-center gap-2"
               >
                 <Send size={16} /> {c.send}
               </button>

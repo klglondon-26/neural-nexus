@@ -9,7 +9,7 @@ const WhoWeServe = () => {
   const section = t('whoWeServe');
 
   return (
-    <section id="who-we-serve" className="section-padding relative z-10">
+    <section id="who-we-serve" className="section-padding">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,6 +18,7 @@ const WhoWeServe = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
+          <p className="section-label">Who We Serve</p>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-3">{section.title}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">{section.subtitle}</p>
         </motion.div>
