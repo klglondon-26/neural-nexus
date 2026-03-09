@@ -10,7 +10,7 @@ const WhatWeBuild = () => {
   const section = t('whatWeBuild');
 
   return (
-    <section id="services" className="section-padding relative z-10">
+    <section id="services" className="section-padding">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,6 +18,7 @@ const WhatWeBuild = () => {
           viewport={{ once: true, margin: '-80px' }}
           className="text-center mb-14"
         >
+          <p className="section-label">What We Build</p>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-3">{section.title}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">{section.subtitle}</p>
         </motion.div>
@@ -40,7 +41,7 @@ const WhatWeBuild = () => {
                     <>
                       <Icon className="w-10 h-10 text-primary mb-4" />
                       <h3 className="font-display font-semibold text-lg text-foreground">{card.front}</h3>
-                      <p className="text-xs text-muted-foreground mt-3">{section.flipHint}</p>
+                      <p className="text-xs text-muted-foreground mt-3 font-mono-label">{section.flipHint}</p>
                     </>
                   }
                   back={

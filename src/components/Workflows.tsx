@@ -9,7 +9,7 @@ const Workflows = () => {
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
 
   return (
-    <section id="workflows" className="section-padding relative z-10">
+    <section id="workflows" className="section-padding">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,6 +17,7 @@ const Workflows = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
+          <p className="section-label">Workflows</p>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-3">{section.title}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">{section.subtitle}</p>
         </motion.div>
@@ -54,7 +55,7 @@ const Workflows = () => {
                     <div className="flex flex-wrap items-center gap-2 pt-2">
                       {item.steps.map((step: string, si: number) => (
                         <div key={si} className="flex items-center gap-2">
-                          <span className="px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-medium">
+                          <span className="px-3 py-1.5 rounded-[3px] bg-primary/10 text-primary text-xs font-medium font-mono-label">
                             {step}
                           </span>
                           {si < item.steps.length - 1 && <ArrowRight size={12} className="text-muted-foreground" />}

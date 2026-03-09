@@ -4,44 +4,44 @@
 
 @layer base {
   :root {
-    --background: 220 25% 4%;
-    --foreground: 210 20% 95%;
+    --background: 225 67% 4%;
+    --foreground: 226 100% 97%;
 
-    --card: 220 20% 8%;
-    --card-foreground: 210 20% 95%;
+    --card: 222 52% 8%;
+    --card-foreground: 226 100% 97%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 222 52% 8%;
+    --popover-foreground: 226 100% 97%;
 
-    --primary: 210 100% 55%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 210 20% 90%;
+    --secondary: 223 55% 6%;
+    --secondary-foreground: 220 20% 58%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 223 55% 6%;
+    --muted-foreground: 220 20% 58%;
 
     --accent: 45 100% 55%;
-    --accent-foreground: 220 25% 4%;
+    --accent-foreground: 225 67% 4%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 15% 18%;
-    --input: 220 15% 15%;
-    --ring: 210 100% 55%;
+    --input: 222 52% 8%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 220 20% 6%;
-    --sidebar-foreground: 210 20% 90%;
-    --sidebar-primary: 210 100% 55%;
+    --sidebar-background: 225 67% 4%;
+    --sidebar-foreground: 220 20% 58%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 15% 12%;
-    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-accent: 223 55% 6%;
+    --sidebar-accent-foreground: 220 20% 58%;
     --sidebar-border: 220 15% 18%;
-    --sidebar-ring: 210 100% 55%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -53,10 +53,12 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 300;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    font-family: 'Syne', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
   }
 
   html {
@@ -66,32 +68,70 @@
 
 @layer components {
   .glass-card {
-    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-2xl;
+    background-color: hsl(222 52% 8% / 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 0.75rem;
   }
 
   .glass-card-hover {
-    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-2xl transition-all duration-300;
+    background-color: hsl(222 52% 8% / 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 0.75rem;
+    transition: border-color 0.2s, background-color 0.2s;
   }
 
   .glass-card-hover:hover {
-    @apply border-primary/30;
-    box-shadow: 0 8px 32px hsl(210 100% 55% / 0.1);
+    border-color: rgba(59, 130, 246, 0.35);
+    background-color: hsl(222 42% 11%);
   }
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(210 100% 55%), hsl(45 100% 55%));
+    background-image: linear-gradient(135deg, hsl(217 91% 60%), hsl(45 100% 55%));
   }
 
   .glow-blue {
-    box-shadow: 0 0 40px hsl(210 100% 55% / 0.15);
+    box-shadow: 0 0 40px hsl(217 91% 60% / 0.15);
   }
 
   .section-padding {
-    @apply py-20 md:py-28 px-6;
+    padding: 100px 1.5rem;
+    @apply relative z-10;
   }
 
   .section-container {
     @apply max-w-6xl mx-auto;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 400;
+    color: hsl(217 91% 60%);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .btn-primary {
+    background-color: hsl(217 91% 60%);
+    color: white;
+    border-radius: 3px;
+    padding: 13px 26px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: box-shadow 0.2s, background-color 0.2s;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 24px rgba(59, 130, 246, 0.3);
+  }
+
+  .font-mono-label {
+    font-family: 'JetBrains Mono', monospace;
   }
 }

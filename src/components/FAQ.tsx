@@ -9,7 +9,7 @@ const FAQ = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="section-padding relative z-10">
+    <section id="faq" className="section-padding">
       <div className="section-container max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,6 +17,7 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
+          <p className="section-label">FAQ</p>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground">{section.title}</h2>
         </motion.div>
 

@@ -5,13 +5,12 @@ import { Search, Hammer, Rocket } from 'lucide-react';
 const CALENDLY_URL = 'https://calendly.com/stephenoffice21/30min';
 const icons = [Search, Hammer, Rocket];
 
-
 const HowItWorks = () => {
   const { t } = useLanguage();
   const section = t('howItWorks');
 
   return (
-    <section id="how-it-works" className="section-padding relative z-10">
+    <section id="how-it-works" className="section-padding">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,6 +18,7 @@ const HowItWorks = () => {
           viewport={{ once: true, margin: '-80px' }}
           className="text-center mb-14"
         >
+          <p className="section-label">How It Works</p>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-3">{section.title}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">{section.subtitle}</p>
         </motion.div>
@@ -63,7 +63,7 @@ const HowItWorks = () => {
         >
           <button
             onClick={() => window.open(CALENDLY_URL, '_blank')}
-            className="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all"
+            className="btn-primary"
           >
             {section.cta}
           </button>

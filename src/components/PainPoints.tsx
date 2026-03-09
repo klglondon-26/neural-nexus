@@ -7,7 +7,7 @@ const PainPoints = () => {
   const section = t('painPoints');
 
   return (
-    <section className="section-padding relative z-10">
+    <section className="section-padding">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,6 +15,7 @@ const PainPoints = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
+          <p className="section-label">Pain Points</p>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-3">{section.title}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">{section.subtitle}</p>
         </motion.div>

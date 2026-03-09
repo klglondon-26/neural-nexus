@@ -12,7 +12,7 @@ const FinalCTA = () => {
     : 'https://wa.me/447588897549?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20DXS%20services';
 
   return (
-    <section className="section-padding relative z-10">
+    <section className="section-padding">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -20,12 +20,13 @@ const FinalCTA = () => {
           viewport={{ once: true }}
           className="glass-card p-12 md:p-16 text-center glow-blue"
         >
+          <p className="section-label">Get Started</p>
           <h2 className="font-display font-bold text-3xl md:text-5xl text-foreground mb-4">{section.title}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-lg">{section.subtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => window.open(CALENDLY_URL, '_blank')}
-              className="px-8 py-4 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/25"
+              className="btn-primary"
             >
               {section.cta}
             </button>
@@ -33,7 +34,7 @@ const FinalCTA = () => {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-xl border border-border/60 text-foreground font-semibold hover:bg-secondary transition-all"
+              className="px-[26px] py-[13px] rounded-[3px] border border-[rgba(255,255,255,0.07)] text-foreground font-semibold hover:bg-secondary transition-all"
             >
               {section.ctaSecondary}
             </a>
