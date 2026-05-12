@@ -4,7 +4,7 @@ import { Compass, Layers, Building2, Check, Lock } from 'lucide-react';
 
 const CALENDLY_URL = 'https://calendly.com/stephenoffice21/30min';
 const WHATSAPP_URL = 'https://wa.me/447588897549';
-const icons = [Compass, Layers, Building2];
+const icons = [Layers, Compass, Building2];
 
 const WhatWeBuild = () => {
   const { t } = useLanguage();
