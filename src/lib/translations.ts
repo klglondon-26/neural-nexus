@@ -92,17 +92,6 @@ export const translations = {
       label: 'What We Build',
       tiers: [
         {
-          tag: 'Tier 1 — Wenext Channel',
-          name: 'The Independence Kit',
-          audience: 'For independent hosts (2–5 units)',
-          pain: 'Losing 15–25% of every booking to OTAs.',
-          solution: 'Direct-booking website, built-in payment engine, Google Business setup, iCal sync, CIN compliance.',
-          result: 'Increase margins by up to 20%.',
-          pricing: 'Setup €1,500–€2,500 + €79/month',
-          delivery: 'Delivery in 7–10 days',
-          cta: 'Book a Call',
-        },
-        {
           tag: 'Tier 2 — Wenext Suite',
           name: 'The Efficiency Engine',
           audience: 'For professional hosts (5–20 units)',
@@ -113,6 +102,17 @@ export const translations = {
           delivery: 'Most popular',
           cta: 'Book a Call',
           featured: true,
+        },
+        {
+          tag: 'Tier 1 — Wenext Channel',
+          name: 'The Independence Kit',
+          audience: 'For independent hosts (2–5 units)',
+          pain: 'Losing 15–25% of every booking to OTAs.',
+          solution: 'Direct-booking website, built-in payment engine, Google Business setup, iCal sync, CIN compliance.',
+          result: 'Increase margins by up to 20%.',
+          pricing: 'Setup €1,500–€2,500 + €79/month',
+          delivery: 'Delivery in 7–10 days',
+          cta: 'Book a Call',
         },
         {
           tag: 'Tier 3 — Wenext Operations',
@@ -342,17 +342,6 @@ export const translations = {
       label: 'Cosa Costruiamo',
       tiers: [
         {
-          tag: 'Tier 1 — Wenext Channel',
-          name: 'The Independence Kit',
-          audience: 'Per host indipendenti (2–5 unità)',
-          pain: 'Perdi il 15–25% di ogni prenotazione a favore degli OTA.',
-          solution: 'Sito di prenotazione diretta, pagamenti integrati, setup Google Business, sync iCal, conformità CIN.',
-          result: 'Aumenta i margini fino al 20%.',
-          pricing: 'Setup €1.500–€2.500 + €79/mese',
-          delivery: 'Consegna in 7–10 giorni',
-          cta: 'Prenota una Chiamata',
-        },
-        {
           tag: 'Tier 2 — Wenext Suite',
           name: 'The Efficiency Engine',
           audience: 'Per host professionali (5–20 unità)',
@@ -363,6 +352,17 @@ export const translations = {
           delivery: 'Il più scelto',
           cta: 'Prenota una Chiamata',
           featured: true,
+        },
+        {
+          tag: 'Tier 1 — Wenext Channel',
+          name: 'The Independence Kit',
+          audience: 'Per host indipendenti (2–5 unità)',
+          pain: 'Perdi il 15–25% di ogni prenotazione a favore degli OTA.',
+          solution: 'Sito di prenotazione diretta, pagamenti integrati, setup Google Business, sync iCal, conformità CIN.',
+          result: 'Aumenta i margini fino al 20%.',
+          pricing: 'Setup €1.500–€2.500 + €79/mese',
+          delivery: 'Consegna in 7–10 giorni',
+          cta: 'Prenota una Chiamata',
         },
         {
           tag: 'Tier 3 — Wenext Operations',
