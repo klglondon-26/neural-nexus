@@ -29,6 +29,13 @@ export const translations = {
       description: 'Only 5 spots: full Tier 1 for €497 one-time. Includes video testimonial & case study. Regular price €1,500.',
       cta: 'Claim a Pioneer Spot',
     },
+    audit: {
+      label: 'Free Audit',
+      title: 'Is Your Hospitality Business Leaving Money on the Table?',
+      subtitle: "We'll analyse your current setup — website, OTAs, automation, and staff workflows — and show you exactly where you're losing time and revenue. No pitch, just actionable insights.",
+      cta: 'Book Your Free Audit (15 min)',
+      micro: 'Limited to 5 per week — first come, first served.',
+    },
     whoWeServe: {
       title: 'Who We Serve',
       subtitle: 'Tailored solutions for businesses ready to scale smarter',
