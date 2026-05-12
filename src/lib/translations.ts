@@ -279,6 +279,13 @@ export const translations = {
       description: 'Solo 5 posti: Tier 1 completo a €497 una tantum. Include video testimonial e case study. Prezzo regolare €1.500.',
       cta: 'Prenota un Posto Pioneer',
     },
+    audit: {
+      label: '[IT] Free Audit',
+      title: '[IT] Is Your Hospitality Business Leaving Money on the Table?',
+      subtitle: "[IT] We'll analyse your current setup — website, OTAs, automation, and staff workflows — and show you exactly where you're losing time and revenue. No pitch, just actionable insights.",
+      cta: '[IT] Book Your Free Audit (15 min)',
+      micro: '[IT] Limited to 5 per week — first come, first served.',
+    },
     whoWeServe: {
       title: 'Chi Serviamo',
       subtitle: 'Soluzioni su misura per aziende pronte a crescere in modo intelligente',
