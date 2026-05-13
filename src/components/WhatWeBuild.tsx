@@ -72,10 +72,6 @@ const WhatWeBuild = () => {
                 </dl>
 
                 <div className="mt-6 pt-5 border-t border-[rgba(255,255,255,0.07)]">
-                  <p className="text-sm text-foreground mb-1">{tier.pricing}</p>
-                  {tier.delivery && (
-                    <p className="text-xs text-muted-foreground font-mono-label mb-4">{tier.delivery}</p>
-                  )}
                   {invitation ? (
                     <a
                       href={WHATSAPP_URL}
