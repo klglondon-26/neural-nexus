@@ -261,11 +261,13 @@ export const translations = {
       bookConsultation: 'Prenota il Tuo Audit AI Gratuito',
     },
     hero: {
-      title: 'Il Tuo Business Dovrebbe Funzionare Mentre Dormi',
-      subtitle: 'Costruiamo sistemi AI che gestiscono richieste, prenotazioni, follow-up e workflow — così ti concentri sulla crescita, non sulla gestione.',
-      cta: 'Prenota il Tuo Audit AI Gratuito',
+      title: '[IT] Hospitality Operations,',
+      titleItalic: '[IT] Fully Automated.',
+      subtitle: '[IT] Replace manual admin with intelligent systems. We automate your guest workflows and property logistics so you can focus on scaling your portfolio without adding overhead.',
+      cta: '[IT] Book Your Free Audit (15 min)',
       ctaSecondary: 'Scopri Come Funziona',
       trustedBy: 'Scelto da aziende innovative e partner tecnologici',
+      connectsWith: '[IT] Connects with:',
       stats: [
         { value: '15+', label: 'Ore Risparmiate a Settimana' },
         { value: '60%', label: 'Riduzione Admin' },
@@ -437,19 +439,19 @@ export const translations = {
       seeFlow: 'Vedi il flusso completo',
     },
     partners: {
-      title: 'Lavora con DXS',
-      subtitle: 'Due modi per iniziare — come cliente o come partner referral.',
+      title: '[IT] Selected Partners',
+      subtitle: '[IT] We work with a select group of hospitality and real estate professionals. If you support property operators and see a synergy, we want to hear from you.',
       forClients: {
         title: 'Ho Bisogno di un Sistema',
         description: 'Vuoi un sito web, assistente AI e workflow automatizzati che ti fanno risparmiare tempo e portano più business. Lo costruiremo da zero attorno alle tue operazioni.',
-        cta: 'Prenota una Chiamata',
+        cta: '[IT] Get in Touch',
         ctaSecondary: 'Scrivici su WhatsApp',
       },
       forReferrals: {
-        title: 'Conosco Aziende Che Ne Hanno Bisogno',
-        description: 'Se lavori con piccole imprese — come coach, consulente, commercialista, VA o freelancer marketing — puoi guadagnare una commissione per ogni cliente che presenti a DXS.',
-        note: 'Paghiamo il 10% del valore del progetto sui referral di successo. Semplice, trasparente, senza vincoli.',
-        cta: 'Informazioni sui Referral',
+        title: '[IT] I Work With Property Operators',
+        description: '[IT] Real estate, accountants, consultants, or maintenance professionals — if you support hospitality operators and see a synergy, we want to hear from you.',
+        note: '',
+        cta: '[IT] Get in Touch',
       },
     },
     contact: {
