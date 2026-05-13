@@ -28,8 +28,8 @@ const Hero = () => {
           className="font-display font-bold leading-[1.05] tracking-tight text-foreground max-w-4xl mx-auto mb-6"
           style={{ fontSize: 'clamp(40px, 5vw, 64px)' }}
         >
-          Your Business Should Run<br />
-          <em className="italic">While You Sleep</em>
+          {hero.title}<br />
+          <em className="italic">{hero.titleItalic}</em>
         </motion.h1>
 
         <motion.p
@@ -74,6 +74,29 @@ const Hero = () => {
               <p className="text-xs text-muted-foreground mt-1 font-mono-label">{stat.label}</p>
             </div>
           ))}
+        </motion.div>
+
+        {/* Integration trust badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.1 }}
+          className="mt-12 flex flex-col items-center gap-3"
+        >
+          <p className="font-mono-label text-[11px] tracking-[0.15em] uppercase" style={{ color: '#7B8FAB' }}>
+            {hero.connectsWith}
+          </p>
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm" style={{ color: '#EEF2FF' }}>
+            {['Airbnb', 'Booking.com', 'WhatsApp', 'Stripe', 'Google Business', 'Alloggiati Web'].map((name) => (
+              <span
+                key={name}
+                className="px-3 py-1.5 rounded-[3px] border"
+                style={{ borderColor: 'rgba(255,255,255,0.07)', background: '#0B1120' }}
+              >
+                {name}
+              </span>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
