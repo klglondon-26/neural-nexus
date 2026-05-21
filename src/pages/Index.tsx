@@ -31,8 +31,8 @@ const Index = () => {
         <WhatWeBuild />
         <AuditSection />
         <BeforeAfter />
-        <Workflows />
         <Partners />
+        <Workflows />
         <ContactForm />
         <section className="relative z-10 py-12">
           <div className="section-container text-center mb-6">

@@ -2,7 +2,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import { Compass, Layers, Building2, Check, Lock } from 'lucide-react';
 
-const CALENDLY_URL = 'https://calendly.com/stephenoffice21/30min';
 const WHATSAPP_URL = 'https://wa.me/447588897549';
 const icons = [Layers, Compass, Building2];
 
@@ -82,12 +81,12 @@ const WhatWeBuild = () => {
                       {tier.cta}
                     </a>
                   ) : (
-                    <button
-                      onClick={() => window.open(CALENDLY_URL, '_blank')}
-                      className={featured ? 'btn-primary w-full' : 'w-full px-[26px] py-[13px] rounded-[3px] border border-[rgba(255,255,255,0.07)] text-foreground font-semibold text-sm hover:bg-secondary transition-all'}
+                    <a
+                      href="#free-audit"
+                      className={featured ? 'btn-primary w-full inline-block text-center' : 'w-full inline-block text-center px-[26px] py-[13px] rounded-[3px] border border-[rgba(255,255,255,0.07)] text-foreground font-semibold text-sm hover:bg-secondary transition-all'}
                     >
                       {tier.cta}
-                    </button>
+                    </a>
                   )}
                 </div>
               </motion.div>

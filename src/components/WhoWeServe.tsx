@@ -29,11 +29,12 @@ const WhoWeServe = () => {
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: i === 0 ? -60 : i === 2 ? 60 : 0, y: i === 1 ? 40 : 0, rotateY: i === 0 ? 10 : i === 2 ? -10 : 0 }}
+                whileInView={{ opacity: 1, x: 0, y: 0, rotateY: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
                 className="glass-card-hover p-8"
+                style={{ transformPerspective: 1000 }}
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                   <Icon className="w-6 h-6 text-primary" />

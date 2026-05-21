@@ -2,8 +2,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import { Users, Gift } from 'lucide-react';
 
-const CALENDLY_URL = 'https://calendly.com/stephenoffice21/30min';
-
 const Partners = () => {
   const { t, language } = useLanguage();
   const section = t('partners');
@@ -29,18 +27,20 @@ const Partners = () => {
         <div className="grid md:grid-cols-2 gap-6">
           {/* For Clients */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -60, rotateY: 8 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             className="glass-card-hover p-8"
+            style={{ transformPerspective: 1000 }}
           >
             <Users className="w-10 h-10 text-primary mb-4" />
             <h3 className="font-display font-semibold text-xl text-foreground mb-3">{section.forClients.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">{section.forClients.description}</p>
             <div className="flex gap-3">
-              <button onClick={() => window.open(CALENDLY_URL, '_blank')} className="btn-primary text-sm">
+              <a href="#contact" className="btn-primary text-sm inline-block">
                 {section.forClients.cta}
-              </button>
+              </a>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="px-[26px] py-[13px] rounded-[3px] border border-[rgba(255,255,255,0.07)] text-foreground text-sm font-medium hover:bg-secondary transition-colors">
                 {section.forClients.ctaSecondary}
               </a>
@@ -49,18 +49,22 @@ const Partners = () => {
 
           {/* For Referral Partners */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: 60, rotateY: -8 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             className="glass-card-hover p-8"
+            style={{ transformPerspective: 1000 }}
           >
             <Gift className="w-10 h-10 text-accent mb-4" />
             <h3 className="font-display font-semibold text-xl text-foreground mb-3">{section.forReferrals.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-3">{section.forReferrals.description}</p>
-            <p className="text-xs text-accent font-medium mb-6 font-mono-label">{section.forReferrals.note}</p>
-            <button onClick={() => window.open(CALENDLY_URL, '_blank')} className="px-[26px] py-[13px] rounded-[3px] bg-accent text-accent-foreground text-sm font-semibold hover:bg-accent/90 transition-colors">
+            {section.forReferrals.note ? (
+              <p className="text-xs text-accent font-medium mb-6 font-mono-label">{section.forReferrals.note}</p>
+            ) : <div className="mb-6" />}
+            <a href="#contact" className="inline-block px-[26px] py-[13px] rounded-[3px] bg-accent text-accent-foreground text-sm font-semibold hover:bg-accent/90 transition-colors">
               {section.forReferrals.cta}
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>

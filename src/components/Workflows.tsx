@@ -26,11 +26,13 @@ const Workflows = () => {
           {section.items.map((item: any, i: number) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              initial={{ opacity: 0, y: 30, rotateX: 8 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              whileHover={{ y: -6, rotateX: -3, rotateY: 3, scale: 1.02 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.45, delay: i * 0.1, ease: 'easeOut' }}
               className="glass-card-hover p-6"
+              style={{ transformPerspective: 1000 }}
             >
               <h3 className="font-display font-semibold text-lg text-foreground mb-3">{item.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">{item.description}</p>
