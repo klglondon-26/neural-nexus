@@ -24,11 +24,12 @@ const BeforeAfter = () => {
           {section.cards.map((card: any, i: number) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50, rotateY: i % 2 === 0 ? 8 : -8 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
               className="glass-card-hover p-6"
+              style={{ transformPerspective: 1000 }}
             >
               <div className="mb-4">
                 <span className="text-xs font-semibold uppercase tracking-wider text-destructive/70 font-mono-label">Before</span>
