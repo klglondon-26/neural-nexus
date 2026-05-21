@@ -32,7 +32,10 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-border/20">
-          <p className="text-xs text-muted-foreground">{footer.rights}</p>
+          <div className="text-xs text-muted-foreground space-y-1">
+            <p>{footer.rights}</p>
+            {footer.note && <p className="opacity-80">{footer.note}</p>}
+          </div>
           <div className="flex gap-4 text-xs text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">{footer.privacy}</a>
             <a href="#" className="hover:text-foreground transition-colors">{footer.terms}</a>
